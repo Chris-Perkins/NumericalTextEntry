@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NumericalTextEntry_Example' do
+  pod 'NumericalTextEntry', :path => '../'
+
+  target 'NumericalTextEntry_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
