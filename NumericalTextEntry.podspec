@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 NumericalTextEntry is a specialized view that allows for numeric input. Input text is first formatted using an input NumberFormatter then displayed using a custom NumberDisplayer.
                        DESC
 
-  s.homepage         = 'https://github.com/Chris-Perkins/NumericalTextField'
+  s.homepage         = 'https://github.com/Chris-Perkins/NumericalTextEntry'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'chrisfromtemporaryid@gmail.com' => 'chrisfromtemporaryid@gmail.com' }
   s.source           = { :git => 'https://github.com/Chris-Perkins/NumericalTextEntry.git', :tag => s.version.to_s }

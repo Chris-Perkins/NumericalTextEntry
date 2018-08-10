@@ -124,7 +124,7 @@ iOS 10.0 is required.
 
 ## Documentation
 
-Read the [docs](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Chris-Perkins/NumericalTextEntry/master/docs/index.html)
+Read the [docs](https://htmlpreview.github.io/?https://github.com/Chris-Perkins/NumericalTextEntry/blob/master/docs/index.html)
 
 ## Author
 
