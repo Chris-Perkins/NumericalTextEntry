@@ -30,8 +30,7 @@ open class UINumberEntryField: UIControl {
     private static let localeIdentifierForDefaultDecimalSeparator = "en_US"
     
     /// The default number displayer.
-    private static let defaultNumberDisplayer: UINumberDisplayer =
-        UIFlatNumberDisplayer()
+    private static let defaultNumberDisplayer: UINumberDisplayer = UIFittedFlatNumberDisplayer()
     
     /// The default string to show when there are no characters in the field yet.
     private static var defaultText = "0"
