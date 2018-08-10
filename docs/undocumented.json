@@ -1,0 +1,40 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/NumberDisplayers/UIFittedFlatNumberDisplayer.swift",
+      "line": 49,
+      "symbol": "UIFittedFlatNumberDisplayer.init(withFont:withTextColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/NumberDisplayers/UIFloatingDecimalNumberDisplayer.swift",
+      "line": 62,
+      "symbol": "UIFloatingDecimalNumberDisplayer.init(withFont:withTextColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/UINumberEntryField.swift",
+      "line": 200,
+      "symbol": "UINumberEntryField.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/UINumberEntryField.swift",
+      "line": 205,
+      "symbol": "UINumberEntryField.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/UINumberEntryField.swift",
+      "line": 210,
+      "symbol": "UINumberEntryField.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/chrisperkins/Desktop/NumericalTextEntry"
+}

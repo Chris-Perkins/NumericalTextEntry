@@ -1,0 +1,1200 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01DDE675CA076816A868AE0138896B6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */; };
+		08E3596D19395E9ADDE18877B4698F96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */; };
+		21FDF457AA0CFBFB6F8406CD8BF0BBCF /* UINumberDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBF54600B07DD661E86AC70FBBAE59 /* UINumberDisplayer.swift */; };
+		220B0E7F750C80AC7E71EF31C17EC45C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7DA4650B5C953D90E7919D9A28138 /* UIViewExtension.swift */; };
+		22C83F8BB7533A85F5419E7E90433DA0 /* NSLayoutConstraintCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B1529AC4ECB4374F7D1E0EDACCC4BF /* NSLayoutConstraintCollectionExtension.swift */; };
+		23B9B934DDD2807FC565854387908A0F /* ClingConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 519DD0EFB9551B2A6FBF60AA2CA6CD5D /* ClingConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E5DA0D911647A7578269777BFE2E3AF /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C4E6FFF0A7B9BEBC936FEB4CFCB3E /* PrettyButton.swift */; };
+		319F7C4379C0FF768B6BB0E589829EAC /* Pods-NumericalTextEntry_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BD3E25462351042B2F4A056D8DB8AA /* Pods-NumericalTextEntry_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48AE61DB9197A85E67D5F69E1F1C64A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */; };
+		503A2BAEC8DB086696286CC97F2A28A6 /* PrettyButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D9AF078CCFC672A2DA403D578AFC02 /* PrettyButtons.framework */; };
+		5D3620E86DF06578BEC23DA8A06ABF5F /* FillMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB412F18CACFAA03651EA6D392B2C99 /* FillMethod.swift */; };
+		63EAA74646FE5505A15E5C83CB2E09DA /* PrettyButtons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C17B2340104B2B3056ABDC2E5EF2BCF /* PrettyButtons-dummy.m */; };
+		697EEACF487669A4AADE0460399B76EF /* UIFittedFlatNumberDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BC431BFC1015B74B5076B7F0B3AA7 /* UIFittedFlatNumberDisplayer.swift */; };
+		72B7E375BEF9C8EE28A196CA1C759E4F /* FittedStringDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8059C1C4893643F59B6E27B90DF11A /* FittedStringDisplayer.swift */; };
+		7BEC3071E77BEA4ADAF61738FF0D7A68 /* PrettyButtons-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1600C0DC318BFA01390FBCECC6D34F07 /* PrettyButtons-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88F2BDD851A4312407E7A369BB63A338 /* ClingConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B79DC1A4882C290D9E9A8C13C5D3B89 /* ClingConstraints.framework */; };
+		8D59F8BA6182AA7B044BC0A689D17850 /* ClingConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B92184368C38F0B1AAD72F8399DA132 /* ClingConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		957DCA07357ABB56CDD0EE98993C42C8 /* UINumericalKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB359FB4F40F7FC74C9732BDAD8EF8 /* UINumericalKeyboardView.swift */; };
+		9C0F5307620AAB4FFCD7B3C2075A69F8 /* ClingConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B79DC1A4882C290D9E9A8C13C5D3B89 /* ClingConstraints.framework */; };
+		A0ED62FC2C2EC50DAEBEBBF3959CDC18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */; };
+		A3EA04BF93C80C0C2735FE8A27359173 /* ClingConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E72AC25C8E9C2D2470E98FD68F126F /* ClingConstraints-dummy.m */; };
+		A4D64ED6C477FF5A54039E13B9CC8054 /* UINumberEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012E6BFF68E32ECEA3CA5791DAC6B1B /* UINumberEntryField.swift */; };
+		A93A5E49238277D6747D61DF6AE9B72F /* NSAttributedTextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D016C4999955518959E570E20828565 /* NSAttributedTextExtensions.swift */; };
+		AD0A0C5C8D3F45120D25E49DBEEE14FC /* UIFloatingDecimalNumberDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BD2577CC8DFA4ACE84074C207E3CD /* UIFloatingDecimalNumberDisplayer.swift */; };
+		C395FEBDE770B6A994CB5E5591767451 /* UIFlatNumberDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC768D675B32FD906B0FECBFB279E9 /* UIFlatNumberDisplayer.swift */; };
+		C3CB3C807E321300252A819122C66735 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD07D8102CF6DC9CA27E285EF274E1 /* UIViewExtensions.swift */; };
+		C66DFB0F2859A76D39DD61E335EE7F29 /* NumericalTextEntry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3763208ABB2A16AD15854406B52D01E0 /* NumericalTextEntry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA76DB688B6E737D5B4741A2FCFD88FB /* Pods-NumericalTextEntry_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E02E5B548CB93E6CB9FCEF7C61B863 /* Pods-NumericalTextEntry_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D117A30D1EB371CD35D4C4E18D1C5571 /* Pods-NumericalTextEntry_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DADBA2975BFE079977E1E445329E3404 /* Pods-NumericalTextEntry_Example-dummy.m */; };
+		DF95C7DB6B515C08F8AFCD202DCC43FF /*  UISingleNumberDisplayerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4408B55A9BDA809B33970C63180723 /*  UISingleNumberDisplayerLabel.swift */; };
+		E0A0B66A978428BB68C709B8BCF08F41 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A4B23B9DCC14F65CE6B56CC727590 /* NSLayoutConstraintExtension.swift */; };
+		E594597B4794E32FD5C0C485F578AB32 /* NumericalTextEntry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C82D8311517DE8A46193891E89864A1B /* NumericalTextEntry-dummy.m */; };
+		EDF5BF3CDF19E761D3BB1539EFD1919A /* NumericalTextEntryNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A385CFF1BA6980FA1F947DB05C7B8B3A /* NumericalTextEntryNotifications.swift */; };
+		EE52447AD9138ECE3889652B82058838 /* NumberDisplayerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3238EBB16ECE57598C27B7CB2E13A9C /* NumberDisplayerUtils.swift */; };
+		F0E806845217C0F2D94F2ED82A5E71D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */; };
+		F44F28F8F1E94EF51F2E0D9A5C49F21A /* Pods-NumericalTextEntry_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2115C219A09D5A5E6101B42CE224E24 /* Pods-NumericalTextEntry_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04D70DC0EF641BA15BBA2569D9C3CFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46E66926860F0475EC4EE7F9CD2008F;
+			remoteInfo = ClingConstraints;
+		};
+		328A479136781A66097C6F4F975F00D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8DA3A395D7B81E18C4823B4154ABBC;
+			remoteInfo = PrettyButtons;
+		};
+		4768AC6234AE274F0366175C46BE27FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46E66926860F0475EC4EE7F9CD2008F;
+			remoteInfo = ClingConstraints;
+		};
+		58F88EB489151B22D6AC091D776DE7AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46E66926860F0475EC4EE7F9CD2008F;
+			remoteInfo = ClingConstraints;
+		};
+		A180396E511932E69D110B474BFF470A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA6804B9ACBB7526C038C781E81722C0;
+			remoteInfo = NumericalTextEntry;
+		};
+		D4A0BF868AF251193CD9F107E28D4B64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8DA3A395D7B81E18C4823B4154ABBC;
+			remoteInfo = PrettyButtons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0012E6BFF68E32ECEA3CA5791DAC6B1B /* UINumberEntryField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINumberEntryField.swift; path = NumericalTextEntry/Classes/UINumberEntryField.swift; sourceTree = "<group>"; };
+		007C4E6FFF0A7B9BEBC936FEB4CFCB3E /* PrettyButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrettyButton.swift; path = PrettyButtons/Classes/PrettyButton.swift; sourceTree = "<group>"; };
+		054C3AB6FD44E33B04E8C8E99B687C29 /* Pods_NumericalTextEntry_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NumericalTextEntry_Example.framework; path = "Pods-NumericalTextEntry_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C17B2340104B2B3056ABDC2E5EF2BCF /* PrettyButtons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PrettyButtons-dummy.m"; sourceTree = "<group>"; };
+		0C7915F9B17C457999227CF47E675D7C /* ClingConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ClingConstraints.framework; path = ClingConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D4408B55A9BDA809B33970C63180723 /*  UISingleNumberDisplayerLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = " UISingleNumberDisplayerLabel.swift"; sourceTree = "<group>"; };
+		0E58362F4B71A3476C2C65E340FBFB92 /* Pods-NumericalTextEntry_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NumericalTextEntry_Tests-resources.sh"; sourceTree = "<group>"; };
+		0F8059C1C4893643F59B6E27B90DF11A /* FittedStringDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FittedStringDisplayer.swift; sourceTree = "<group>"; };
+		101BC57C2BB58D415E19E463B0F93BDE /* PrettyButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PrettyButtons.framework; path = PrettyButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1600C0DC318BFA01390FBCECC6D34F07 /* PrettyButtons-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrettyButtons-umbrella.h"; sourceTree = "<group>"; };
+		1722CA489CAFFD354BE75EDAFFE2E451 /* PrettyButtons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrettyButtons-prefix.pch"; sourceTree = "<group>"; };
+		1B79DC1A4882C290D9E9A8C13C5D3B89 /* ClingConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClingConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B92184368C38F0B1AAD72F8399DA132 /* ClingConstraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClingConstraints.h; path = ClingConstraints/ClingConstraints.h; sourceTree = "<group>"; };
+		23640A924839B223E70AEDCDE007C0C4 /* NumericalTextEntry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NumericalTextEntry-prefix.pch"; sourceTree = "<group>"; };
+		256F360018775CE0CB12C0CF909BF367 /* ClingConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ClingConstraints-prefix.pch"; sourceTree = "<group>"; };
+		2CFBF54600B07DD661E86AC70FBBAE59 /* UINumberDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UINumberDisplayer.swift; sourceTree = "<group>"; };
+		2FB456657BE41530DF21D0BE3642B423 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32A54152D89AB2ED11DE0131DF2A9171 /* ClingConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClingConstraints.xcconfig; sourceTree = "<group>"; };
+		3763208ABB2A16AD15854406B52D01E0 /* NumericalTextEntry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NumericalTextEntry-umbrella.h"; sourceTree = "<group>"; };
+		3B2CB20604633007C31651CFB255DB27 /* NumericalTextEntry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NumericalTextEntry.framework; path = NumericalTextEntry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40DEE83D64D3343B449D0C0F84D0DF86 /* Pods-NumericalTextEntry_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NumericalTextEntry_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4B7392F7BDE2A8A0AD9CB1B420BC9B69 /* PrettyButtons.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PrettyButtons.modulemap; sourceTree = "<group>"; };
+		519DD0EFB9551B2A6FBF60AA2CA6CD5D /* ClingConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ClingConstraints-umbrella.h"; sourceTree = "<group>"; };
+		54D9AF078CCFC672A2DA403D578AFC02 /* PrettyButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrettyButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9E5086FB8D1F8AFE6E4BF4DBE2B1EB /* Pods-NumericalTextEntry_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NumericalTextEntry_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DB412F18CACFAA03651EA6D392B2C99 /* FillMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillMethod.swift; path = ClingConstraints/FillMethod.swift; sourceTree = "<group>"; };
+		6108703224C96D551F4EBA3618D0121C /* ClingConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ClingConstraints.modulemap; sourceTree = "<group>"; };
+		65BD3E25462351042B2F4A056D8DB8AA /* Pods-NumericalTextEntry_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NumericalTextEntry_Example-umbrella.h"; sourceTree = "<group>"; };
+		663FA8CD6A381897BEF409EBA72B91C2 /* NumericalTextEntry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NumericalTextEntry.modulemap; sourceTree = "<group>"; };
+		67A6D9396C6AAA5C4E3686F7EC00AA4C /* Pods-NumericalTextEntry_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NumericalTextEntry_Example.modulemap"; sourceTree = "<group>"; };
+		67BA94D32C659CB8DA60DA8B3E9CC035 /* PrettyButtons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrettyButtons.xcconfig; sourceTree = "<group>"; };
+		75D2E4097D65A94E40796D7A3FBAB048 /* Pods-NumericalTextEntry_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NumericalTextEntry_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		79E02E5B548CB93E6CB9FCEF7C61B863 /* Pods-NumericalTextEntry_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NumericalTextEntry_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7B4C2D1548705A5DD37AE1E4B2BFD38B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E72AC25C8E9C2D2470E98FD68F126F /* ClingConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ClingConstraints-dummy.m"; sourceTree = "<group>"; };
+		84FF7553717B0F7888BF9D1E4D31D99C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8887743BD4EF9A1F103F0C1B59C58CCA /* Pods-NumericalTextEntry_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NumericalTextEntry_Example-frameworks.sh"; sourceTree = "<group>"; };
+		89EE5DA4101EAE62275A8E3993BD854E /* Pods-NumericalTextEntry_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NumericalTextEntry_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		89FA31B1C11544ED8FDD05E0F2DB685A /* NumericalTextEntry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NumericalTextEntry.xcconfig; sourceTree = "<group>"; };
+		8D016C4999955518959E570E20828565 /* NSAttributedTextExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSAttributedTextExtensions.swift; sourceTree = "<group>"; };
+		8D3A4B23B9DCC14F65CE6B56CC727590 /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraintExtension.swift; path = ClingConstraints/NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94B1529AC4ECB4374F7D1E0EDACCC4BF /* NSLayoutConstraintCollectionExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraintCollectionExtension.swift; path = ClingConstraints/NSLayoutConstraintCollectionExtension.swift; sourceTree = "<group>"; };
+		9A47C3B946C3DEEB5C24DB0E2A50367C /* Pods-NumericalTextEntry_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NumericalTextEntry_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9B39A2A976602FB4DB205497853B413F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13FC4E04E21479FE8A639DA58451581 /* Pods_NumericalTextEntry_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NumericalTextEntry_Tests.framework; path = "Pods-NumericalTextEntry_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2115C219A09D5A5E6101B42CE224E24 /* Pods-NumericalTextEntry_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NumericalTextEntry_Tests-dummy.m"; sourceTree = "<group>"; };
+		A385CFF1BA6980FA1F947DB05C7B8B3A /* NumericalTextEntryNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumericalTextEntryNotifications.swift; sourceTree = "<group>"; };
+		A57BD2577CC8DFA4ACE84074C207E3CD /* UIFloatingDecimalNumberDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIFloatingDecimalNumberDisplayer.swift; sourceTree = "<group>"; };
+		A5AC768D675B32FD906B0FECBFB279E9 /* UIFlatNumberDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIFlatNumberDisplayer.swift; sourceTree = "<group>"; };
+		B0A7DA4650B5C953D90E7919D9A28138 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = ClingConstraints/UIViewExtension.swift; sourceTree = "<group>"; };
+		B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B4BA83BAD6DAFAE2BC99543D3649ACA5 /* Pods-NumericalTextEntry_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NumericalTextEntry_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B7CD07D8102CF6DC9CA27E285EF274E1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		BB4BC431BFC1015B74B5076B7F0B3AA7 /* UIFittedFlatNumberDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIFittedFlatNumberDisplayer.swift; sourceTree = "<group>"; };
+		BC66DC0B0F9A7E3BCE358C61CAA5F954 /* Pods-NumericalTextEntry_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NumericalTextEntry_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BCEB359FB4F40F7FC74C9732BDAD8EF8 /* UINumericalKeyboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINumericalKeyboardView.swift; path = NumericalTextEntry/Classes/UINumericalKeyboardView.swift; sourceTree = "<group>"; };
+		BD89BFE4D0141BB4B29F2D78B7B6B8FC /* Pods-NumericalTextEntry_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NumericalTextEntry_Tests.modulemap"; sourceTree = "<group>"; };
+		C3238EBB16ECE57598C27B7CB2E13A9C /* NumberDisplayerUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberDisplayerUtils.swift; sourceTree = "<group>"; };
+		C82D8311517DE8A46193891E89864A1B /* NumericalTextEntry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NumericalTextEntry-dummy.m"; sourceTree = "<group>"; };
+		C9E190890A5248FCFCBDA311059DA085 /* Pods-NumericalTextEntry_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NumericalTextEntry_Example-resources.sh"; sourceTree = "<group>"; };
+		DADBA2975BFE079977E1E445329E3404 /* Pods-NumericalTextEntry_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NumericalTextEntry_Example-dummy.m"; sourceTree = "<group>"; };
+		E16308DE72FE1345843C0EDA193C04F3 /* Pods-NumericalTextEntry_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NumericalTextEntry_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EE9A83C6232E6E319DC1C9D675F08CB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8320DA3E7A957FEFA0D80392D454F67 /* Pods-NumericalTextEntry_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NumericalTextEntry_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11FDE3D0128FEEFBEF804FE3BB2E58E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E806845217C0F2D94F2ED82A5E71D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5629A73A02AF39148FC1D7543DE47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08E3596D19395E9ADDE18877B4698F96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BDE6F602D872055B9C1ECBB7D65E52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0ED62FC2C2EC50DAEBEBBF3959CDC18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDE90C58AFBFF7D8DE84EE5F28D8F3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C0F5307620AAB4FFCD7B3C2075A69F8 /* ClingConstraints.framework in Frameworks */,
+				01DDE675CA076816A868AE0138896B6F /* Foundation.framework in Frameworks */,
+				503A2BAEC8DB086696286CC97F2A28A6 /* PrettyButtons.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E557FA06B78A90B03C3D120C4160AB5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F2BDD851A4312407E7A369BB63A338 /* ClingConstraints.framework in Frameworks */,
+				48AE61DB9197A85E67D5F69E1F1C64A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08690BC9C7F69C9195AA324491762B39 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3951FFD18377469D64D367425C585705 /* Pods-NumericalTextEntry_Example */,
+				FDADE00F121701FF4BA3568CED06CCEB /* Pods-NumericalTextEntry_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1E47827F72BD28DBB57CA4FBE4E65A21 /* NumberDisplayers */ = {
+			isa = PBXGroup;
+			children = (
+				BB4BC431BFC1015B74B5076B7F0B3AA7 /* UIFittedFlatNumberDisplayer.swift */,
+				A5AC768D675B32FD906B0FECBFB279E9 /* UIFlatNumberDisplayer.swift */,
+				A57BD2577CC8DFA4ACE84074C207E3CD /* UIFloatingDecimalNumberDisplayer.swift */,
+				2CFBF54600B07DD661E86AC70FBBAE59 /* UINumberDisplayer.swift */,
+				673CC5103F0F3E42314894D0D8F424E9 /* Supporting Classes */,
+			);
+			name = NumberDisplayers;
+			path = NumericalTextEntry/Classes/NumberDisplayers;
+			sourceTree = "<group>";
+		};
+		20ED4F0AF1248C35832DD57718ACB727 /* ClingConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				1B92184368C38F0B1AAD72F8399DA132 /* ClingConstraints.h */,
+				5DB412F18CACFAA03651EA6D392B2C99 /* FillMethod.swift */,
+				94B1529AC4ECB4374F7D1E0EDACCC4BF /* NSLayoutConstraintCollectionExtension.swift */,
+				8D3A4B23B9DCC14F65CE6B56CC727590 /* NSLayoutConstraintExtension.swift */,
+				B0A7DA4650B5C953D90E7919D9A28138 /* UIViewExtension.swift */,
+				A375262964EBB78F7D2A7C548E2488DD /* Support Files */,
+			);
+			name = ClingConstraints;
+			path = ClingConstraints;
+			sourceTree = "<group>";
+		};
+		2E53C2DDB10F4E399096444EAD472FCE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C3238EBB16ECE57598C27B7CB2E13A9C /* NumberDisplayerUtils.swift */,
+				A385CFF1BA6980FA1F947DB05C7B8B3A /* NumericalTextEntryNotifications.swift */,
+			);
+			name = Utils;
+			path = NumericalTextEntry/Classes/Utils;
+			sourceTree = "<group>";
+		};
+		30BD5A68BE5504F3F6ED8FA274627B1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D016C4999955518959E570E20828565 /* NSAttributedTextExtensions.swift */,
+				B7CD07D8102CF6DC9CA27E285EF274E1 /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
+			path = NumericalTextEntry/Classes/Extensions;
+			sourceTree = "<group>";
+		};
+		3951FFD18377469D64D367425C585705 /* Pods-NumericalTextEntry_Example */ = {
+			isa = PBXGroup;
+			children = (
+				9B39A2A976602FB4DB205497853B413F /* Info.plist */,
+				67A6D9396C6AAA5C4E3686F7EC00AA4C /* Pods-NumericalTextEntry_Example.modulemap */,
+				B4BA83BAD6DAFAE2BC99543D3649ACA5 /* Pods-NumericalTextEntry_Example-acknowledgements.markdown */,
+				BC66DC0B0F9A7E3BCE358C61CAA5F954 /* Pods-NumericalTextEntry_Example-acknowledgements.plist */,
+				DADBA2975BFE079977E1E445329E3404 /* Pods-NumericalTextEntry_Example-dummy.m */,
+				8887743BD4EF9A1F103F0C1B59C58CCA /* Pods-NumericalTextEntry_Example-frameworks.sh */,
+				C9E190890A5248FCFCBDA311059DA085 /* Pods-NumericalTextEntry_Example-resources.sh */,
+				65BD3E25462351042B2F4A056D8DB8AA /* Pods-NumericalTextEntry_Example-umbrella.h */,
+				E16308DE72FE1345843C0EDA193C04F3 /* Pods-NumericalTextEntry_Example.debug.xcconfig */,
+				F8320DA3E7A957FEFA0D80392D454F67 /* Pods-NumericalTextEntry_Example.release.xcconfig */,
+			);
+			name = "Pods-NumericalTextEntry_Example";
+			path = "Target Support Files/Pods-NumericalTextEntry_Example";
+			sourceTree = "<group>";
+		};
+		673CC5103F0F3E42314894D0D8F424E9 /* Supporting Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0D4408B55A9BDA809B33970C63180723 /*  UISingleNumberDisplayerLabel.swift */,
+				0F8059C1C4893643F59B6E27B90DF11A /* FittedStringDisplayer.swift */,
+			);
+			name = "Supporting Classes";
+			path = "Supporting Classes";
+			sourceTree = "<group>";
+		};
+		681EE0E776278BCF16EFD9462A083341 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FB456657BE41530DF21D0BE3642B423 /* Info.plist */,
+				663FA8CD6A381897BEF409EBA72B91C2 /* NumericalTextEntry.modulemap */,
+				89FA31B1C11544ED8FDD05E0F2DB685A /* NumericalTextEntry.xcconfig */,
+				C82D8311517DE8A46193891E89864A1B /* NumericalTextEntry-dummy.m */,
+				23640A924839B223E70AEDCDE007C0C4 /* NumericalTextEntry-prefix.pch */,
+				3763208ABB2A16AD15854406B52D01E0 /* NumericalTextEntry-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NumericalTextEntry";
+			sourceTree = "<group>";
+		};
+		69DC1C96D79B8326E70FF72D8D4202C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C7915F9B17C457999227CF47E675D7C /* ClingConstraints.framework */,
+				3B2CB20604633007C31651CFB255DB27 /* NumericalTextEntry.framework */,
+				054C3AB6FD44E33B04E8C8E99B687C29 /* Pods_NumericalTextEntry_Example.framework */,
+				A13FC4E04E21479FE8A639DA58451581 /* Pods_NumericalTextEntry_Tests.framework */,
+				101BC57C2BB58D415E19E463B0F93BDE /* PrettyButtons.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BD93AAF5A26F9CDA45E2365731626155 /* Development Pods */,
+				F6CE71FA428A5B045B5A08EAE3045D0B /* Frameworks */,
+				F278E1E46F686B9AB5A8243E4DC802C9 /* Pods */,
+				69DC1C96D79B8326E70FF72D8D4202C9 /* Products */,
+				08690BC9C7F69C9195AA324491762B39 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A0BE56FBCE111B4B472B42631C4D78BD /* PrettyButtons */ = {
+			isa = PBXGroup;
+			children = (
+				007C4E6FFF0A7B9BEBC936FEB4CFCB3E /* PrettyButton.swift */,
+				B5122E8403DBFD5ADE8D6B09F7423F21 /* Support Files */,
+			);
+			name = PrettyButtons;
+			path = PrettyButtons;
+			sourceTree = "<group>";
+		};
+		A375262964EBB78F7D2A7C548E2488DD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6108703224C96D551F4EBA3618D0121C /* ClingConstraints.modulemap */,
+				32A54152D89AB2ED11DE0131DF2A9171 /* ClingConstraints.xcconfig */,
+				81E72AC25C8E9C2D2470E98FD68F126F /* ClingConstraints-dummy.m */,
+				256F360018775CE0CB12C0CF909BF367 /* ClingConstraints-prefix.pch */,
+				519DD0EFB9551B2A6FBF60AA2CA6CD5D /* ClingConstraints-umbrella.h */,
+				EE9A83C6232E6E319DC1C9D675F08CB2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ClingConstraints";
+			sourceTree = "<group>";
+		};
+		A3859B3F6D482136DA102AA2994DAF42 /* NumericalTextEntry */ = {
+			isa = PBXGroup;
+			children = (
+				0012E6BFF68E32ECEA3CA5791DAC6B1B /* UINumberEntryField.swift */,
+				BCEB359FB4F40F7FC74C9732BDAD8EF8 /* UINumericalKeyboardView.swift */,
+				30BD5A68BE5504F3F6ED8FA274627B1A /* Extensions */,
+				1E47827F72BD28DBB57CA4FBE4E65A21 /* NumberDisplayers */,
+				681EE0E776278BCF16EFD9462A083341 /* Support Files */,
+				2E53C2DDB10F4E399096444EAD472FCE /* Utils */,
+			);
+			name = NumericalTextEntry;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B5122E8403DBFD5ADE8D6B09F7423F21 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7553717B0F7888BF9D1E4D31D99C /* Info.plist */,
+				4B7392F7BDE2A8A0AD9CB1B420BC9B69 /* PrettyButtons.modulemap */,
+				67BA94D32C659CB8DA60DA8B3E9CC035 /* PrettyButtons.xcconfig */,
+				0C17B2340104B2B3056ABDC2E5EF2BCF /* PrettyButtons-dummy.m */,
+				1722CA489CAFFD354BE75EDAFFE2E451 /* PrettyButtons-prefix.pch */,
+				1600C0DC318BFA01390FBCECC6D34F07 /* PrettyButtons-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PrettyButtons";
+			sourceTree = "<group>";
+		};
+		BD93AAF5A26F9CDA45E2365731626155 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3859B3F6D482136DA102AA2994DAF42 /* NumericalTextEntry */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F278E1E46F686B9AB5A8243E4DC802C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20ED4F0AF1248C35832DD57718ACB727 /* ClingConstraints */,
+				A0BE56FBCE111B4B472B42631C4D78BD /* PrettyButtons */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6CE71FA428A5B045B5A08EAE3045D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B79DC1A4882C290D9E9A8C13C5D3B89 /* ClingConstraints.framework */,
+				54D9AF078CCFC672A2DA403D578AFC02 /* PrettyButtons.framework */,
+				F9D291CD8DEC77B80F0A38DC2419CB78 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9D291CD8DEC77B80F0A38DC2419CB78 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B2A4F7F89DEB803ADDB423FDBC4754A2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FDADE00F121701FF4BA3568CED06CCEB /* Pods-NumericalTextEntry_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C2D1548705A5DD37AE1E4B2BFD38B /* Info.plist */,
+				BD89BFE4D0141BB4B29F2D78B7B6B8FC /* Pods-NumericalTextEntry_Tests.modulemap */,
+				75D2E4097D65A94E40796D7A3FBAB048 /* Pods-NumericalTextEntry_Tests-acknowledgements.markdown */,
+				89EE5DA4101EAE62275A8E3993BD854E /* Pods-NumericalTextEntry_Tests-acknowledgements.plist */,
+				A2115C219A09D5A5E6101B42CE224E24 /* Pods-NumericalTextEntry_Tests-dummy.m */,
+				9A47C3B946C3DEEB5C24DB0E2A50367C /* Pods-NumericalTextEntry_Tests-frameworks.sh */,
+				0E58362F4B71A3476C2C65E340FBFB92 /* Pods-NumericalTextEntry_Tests-resources.sh */,
+				79E02E5B548CB93E6CB9FCEF7C61B863 /* Pods-NumericalTextEntry_Tests-umbrella.h */,
+				5A9E5086FB8D1F8AFE6E4BF4DBE2B1EB /* Pods-NumericalTextEntry_Tests.debug.xcconfig */,
+				40DEE83D64D3343B449D0C0F84D0DF86 /* Pods-NumericalTextEntry_Tests.release.xcconfig */,
+			);
+			name = "Pods-NumericalTextEntry_Tests";
+			path = "Target Support Files/Pods-NumericalTextEntry_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		13221BF8C8C8AE89FAFDFA01296C8EC3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66DFB0F2859A76D39DD61E335EE7F29 /* NumericalTextEntry-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7857EA890EE71121E8D731FBBE271198 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA76DB688B6E737D5B4741A2FCFD88FB /* Pods-NumericalTextEntry_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C11A16E3E38C770D099AEECC0C1A70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F7C4379C0FF768B6BB0E589829EAC /* Pods-NumericalTextEntry_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3332782BE9773E75129409718ADA10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BEC3071E77BEA4ADAF61738FF0D7A68 /* PrettyButtons-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4DBD928E14B40E78B64ED627A3E43B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B9B934DDD2807FC565854387908A0F /* ClingConstraints-umbrella.h in Headers */,
+				8D59F8BA6182AA7B044BC0A689D17850 /* ClingConstraints.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		329D7DCA9408CEC6B44E8845BACBAF8C /* Pods-NumericalTextEntry_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3D85829E118D64D056503B03B33ED2F /* Build configuration list for PBXNativeTarget "Pods-NumericalTextEntry_Tests" */;
+			buildPhases = (
+				261892D8D24952783267A9CFA9DE42BB /* Sources */,
+				11FDE3D0128FEEFBEF804FE3BB2E58E9 /* Frameworks */,
+				7857EA890EE71121E8D731FBBE271198 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NumericalTextEntry_Tests";
+			productName = "Pods-NumericalTextEntry_Tests";
+			productReference = A13FC4E04E21479FE8A639DA58451581 /* Pods_NumericalTextEntry_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA6804B9ACBB7526C038C781E81722C0 /* NumericalTextEntry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B712D08C329A7A2C0356766AD8A84545 /* Build configuration list for PBXNativeTarget "NumericalTextEntry" */;
+			buildPhases = (
+				3F8F84AFB88E76060E724909B6C46AF3 /* Sources */,
+				3BDE90C58AFBFF7D8DE84EE5F28D8F3B /* Frameworks */,
+				13221BF8C8C8AE89FAFDFA01296C8EC3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59BD79F830B6A045B398A811D474C1EC /* PBXTargetDependency */,
+				8963C1550CC1B90B3203E0A060F00A8B /* PBXTargetDependency */,
+			);
+			name = NumericalTextEntry;
+			productName = NumericalTextEntry;
+			productReference = 3B2CB20604633007C31651CFB255DB27 /* NumericalTextEntry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF8DA3A395D7B81E18C4823B4154ABBC /* PrettyButtons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CE4DB2A68517500F562B6BF89D9041F /* Build configuration list for PBXNativeTarget "PrettyButtons" */;
+			buildPhases = (
+				25F9254F74DF0C00C55E29CDBCBD2BD4 /* Sources */,
+				E557FA06B78A90B03C3D120C4160AB5E /* Frameworks */,
+				CB3332782BE9773E75129409718ADA10 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE830840E0F50743580737D744DCAF47 /* PBXTargetDependency */,
+			);
+			name = PrettyButtons;
+			productName = PrettyButtons;
+			productReference = 101BC57C2BB58D415E19E463B0F93BDE /* PrettyButtons.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C46E66926860F0475EC4EE7F9CD2008F /* ClingConstraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5EB1DB1211E7CA70A3E4BCE9E70BEED /* Build configuration list for PBXNativeTarget "ClingConstraints" */;
+			buildPhases = (
+				DA0AAF22B43ADDAAF84909C4F1502482 /* Sources */,
+				20BDE6F602D872055B9C1ECBB7D65E52 /* Frameworks */,
+				EF4DBD928E14B40E78B64ED627A3E43B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClingConstraints;
+			productName = ClingConstraints;
+			productReference = 0C7915F9B17C457999227CF47E675D7C /* ClingConstraints.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D52D5FD29D8197468BF34E27EF0D1789 /* Pods-NumericalTextEntry_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73CC7ABC712C0902995D557D2B1BFE11 /* Build configuration list for PBXNativeTarget "Pods-NumericalTextEntry_Example" */;
+			buildPhases = (
+				EC38ED28E73A2C970C33F67C266E08B5 /* Sources */,
+				1C5629A73A02AF39148FC1D7543DE47A /* Frameworks */,
+				93C11A16E3E38C770D099AEECC0C1A70 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				811F5446F867CA0BB9771837DBD95A47 /* PBXTargetDependency */,
+				76F2E513F68B0E317178AB1F9D986069 /* PBXTargetDependency */,
+				D0292E0BC9B411C78B1FDF9119C831BC /* PBXTargetDependency */,
+			);
+			name = "Pods-NumericalTextEntry_Example";
+			productName = "Pods-NumericalTextEntry_Example";
+			productReference = 054C3AB6FD44E33B04E8C8E99B687C29 /* Pods_NumericalTextEntry_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 69DC1C96D79B8326E70FF72D8D4202C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C46E66926860F0475EC4EE7F9CD2008F /* ClingConstraints */,
+				AA6804B9ACBB7526C038C781E81722C0 /* NumericalTextEntry */,
+				D52D5FD29D8197468BF34E27EF0D1789 /* Pods-NumericalTextEntry_Example */,
+				329D7DCA9408CEC6B44E8845BACBAF8C /* Pods-NumericalTextEntry_Tests */,
+				AF8DA3A395D7B81E18C4823B4154ABBC /* PrettyButtons */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25F9254F74DF0C00C55E29CDBCBD2BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E5DA0D911647A7578269777BFE2E3AF /* PrettyButton.swift in Sources */,
+				63EAA74646FE5505A15E5C83CB2E09DA /* PrettyButtons-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		261892D8D24952783267A9CFA9DE42BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44F28F8F1E94EF51F2E0D9A5C49F21A /* Pods-NumericalTextEntry_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F8F84AFB88E76060E724909B6C46AF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF95C7DB6B515C08F8AFCD202DCC43FF /*  UISingleNumberDisplayerLabel.swift in Sources */,
+				72B7E375BEF9C8EE28A196CA1C759E4F /* FittedStringDisplayer.swift in Sources */,
+				A93A5E49238277D6747D61DF6AE9B72F /* NSAttributedTextExtensions.swift in Sources */,
+				EE52447AD9138ECE3889652B82058838 /* NumberDisplayerUtils.swift in Sources */,
+				E594597B4794E32FD5C0C485F578AB32 /* NumericalTextEntry-dummy.m in Sources */,
+				EDF5BF3CDF19E761D3BB1539EFD1919A /* NumericalTextEntryNotifications.swift in Sources */,
+				697EEACF487669A4AADE0460399B76EF /* UIFittedFlatNumberDisplayer.swift in Sources */,
+				C395FEBDE770B6A994CB5E5591767451 /* UIFlatNumberDisplayer.swift in Sources */,
+				AD0A0C5C8D3F45120D25E49DBEEE14FC /* UIFloatingDecimalNumberDisplayer.swift in Sources */,
+				21FDF457AA0CFBFB6F8406CD8BF0BBCF /* UINumberDisplayer.swift in Sources */,
+				A4D64ED6C477FF5A54039E13B9CC8054 /* UINumberEntryField.swift in Sources */,
+				957DCA07357ABB56CDD0EE98993C42C8 /* UINumericalKeyboardView.swift in Sources */,
+				C3CB3C807E321300252A819122C66735 /* UIViewExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0AAF22B43ADDAAF84909C4F1502482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3EA04BF93C80C0C2735FE8A27359173 /* ClingConstraints-dummy.m in Sources */,
+				5D3620E86DF06578BEC23DA8A06ABF5F /* FillMethod.swift in Sources */,
+				22C83F8BB7533A85F5419E7E90433DA0 /* NSLayoutConstraintCollectionExtension.swift in Sources */,
+				E0A0B66A978428BB68C709B8BCF08F41 /* NSLayoutConstraintExtension.swift in Sources */,
+				220B0E7F750C80AC7E71EF31C17EC45C /* UIViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC38ED28E73A2C970C33F67C266E08B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D117A30D1EB371CD35D4C4E18D1C5571 /* Pods-NumericalTextEntry_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59BD79F830B6A045B398A811D474C1EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClingConstraints;
+			target = C46E66926860F0475EC4EE7F9CD2008F /* ClingConstraints */;
+			targetProxy = 4768AC6234AE274F0366175C46BE27FD /* PBXContainerItemProxy */;
+		};
+		76F2E513F68B0E317178AB1F9D986069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NumericalTextEntry;
+			target = AA6804B9ACBB7526C038C781E81722C0 /* NumericalTextEntry */;
+			targetProxy = A180396E511932E69D110B474BFF470A /* PBXContainerItemProxy */;
+		};
+		811F5446F867CA0BB9771837DBD95A47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClingConstraints;
+			target = C46E66926860F0475EC4EE7F9CD2008F /* ClingConstraints */;
+			targetProxy = 58F88EB489151B22D6AC091D776DE7AE /* PBXContainerItemProxy */;
+		};
+		8963C1550CC1B90B3203E0A060F00A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrettyButtons;
+			target = AF8DA3A395D7B81E18C4823B4154ABBC /* PrettyButtons */;
+			targetProxy = D4A0BF868AF251193CD9F107E28D4B64 /* PBXContainerItemProxy */;
+		};
+		BE830840E0F50743580737D744DCAF47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClingConstraints;
+			target = C46E66926860F0475EC4EE7F9CD2008F /* ClingConstraints */;
+			targetProxy = 04D70DC0EF641BA15BBA2569D9C3CFDC /* PBXContainerItemProxy */;
+		};
+		D0292E0BC9B411C78B1FDF9119C831BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrettyButtons;
+			target = AF8DA3A395D7B81E18C4823B4154ABBC /* PrettyButtons */;
+			targetProxy = 328A479136781A66097C6F4F975F00D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01F0E5AF942F3BD67BD3B52A810A4EA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A54152D89AB2ED11DE0131DF2A9171 /* ClingConstraints.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ClingConstraints/ClingConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ClingConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ClingConstraints/ClingConstraints.modulemap";
+				PRODUCT_NAME = ClingConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		027E1B10B16B88770F46CEC5045C7B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A54152D89AB2ED11DE0131DF2A9171 /* ClingConstraints.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ClingConstraints/ClingConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ClingConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ClingConstraints/ClingConstraints.modulemap";
+				PRODUCT_NAME = ClingConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		02A79BF9CFCC467D258EEE533C7B1028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BA94D32C659CB8DA60DA8B3E9CC035 /* PrettyButtons.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PrettyButtons/PrettyButtons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PrettyButtons/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PrettyButtons/PrettyButtons.modulemap";
+				PRODUCT_NAME = PrettyButtons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2791C5ED6F53BD927CE7EFE2228C44C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BA94D32C659CB8DA60DA8B3E9CC035 /* PrettyButtons.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PrettyButtons/PrettyButtons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PrettyButtons/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PrettyButtons/PrettyButtons.modulemap";
+				PRODUCT_NAME = PrettyButtons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		27E771AF29675115BF901A649ECFF475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FA31B1C11544ED8FDD05E0F2DB685A /* NumericalTextEntry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NumericalTextEntry/NumericalTextEntry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NumericalTextEntry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NumericalTextEntry/NumericalTextEntry.modulemap";
+				PRODUCT_NAME = NumericalTextEntry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		403486E2EDBBFC66CE4C6FFC673FAE8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9E5086FB8D1F8AFE6E4BF4DBE2B1EB /* Pods-NumericalTextEntry_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NumericalTextEntry_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NumericalTextEntry_Tests/Pods-NumericalTextEntry_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NumericalTextEntry_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E1161C6CA3A0EF1662FD5A7ED59725B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FA31B1C11544ED8FDD05E0F2DB685A /* NumericalTextEntry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NumericalTextEntry/NumericalTextEntry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NumericalTextEntry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NumericalTextEntry/NumericalTextEntry.modulemap";
+				PRODUCT_NAME = NumericalTextEntry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8DAF4A1418699BC27F3074ECE2811754 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40DEE83D64D3343B449D0C0F84D0DF86 /* Pods-NumericalTextEntry_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NumericalTextEntry_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NumericalTextEntry_Tests/Pods-NumericalTextEntry_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NumericalTextEntry_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E2236A61C3AE67EE4BDFAD59A2771E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8320DA3E7A957FEFA0D80392D454F67 /* Pods-NumericalTextEntry_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NumericalTextEntry_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NumericalTextEntry_Example/Pods-NumericalTextEntry_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NumericalTextEntry_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E26E14EA3F299DA4BA6C215645BEE928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E16308DE72FE1345843C0EDA193C04F3 /* Pods-NumericalTextEntry_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NumericalTextEntry_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NumericalTextEntry_Example/Pods-NumericalTextEntry_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NumericalTextEntry_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
+				98F29E7567052F62660DDD7069ADF73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CE4DB2A68517500F562B6BF89D9041F /* Build configuration list for PBXNativeTarget "PrettyButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02A79BF9CFCC467D258EEE533C7B1028 /* Debug */,
+				2791C5ED6F53BD927CE7EFE2228C44C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73CC7ABC712C0902995D557D2B1BFE11 /* Build configuration list for PBXNativeTarget "Pods-NumericalTextEntry_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26E14EA3F299DA4BA6C215645BEE928 /* Debug */,
+				E2236A61C3AE67EE4BDFAD59A2771E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B712D08C329A7A2C0356766AD8A84545 /* Build configuration list for PBXNativeTarget "NumericalTextEntry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E771AF29675115BF901A649ECFF475 /* Debug */,
+				6E1161C6CA3A0EF1662FD5A7ED59725B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3D85829E118D64D056503B03B33ED2F /* Build configuration list for PBXNativeTarget "Pods-NumericalTextEntry_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				403486E2EDBBFC66CE4C6FFC673FAE8A /* Debug */,
+				8DAF4A1418699BC27F3074ECE2811754 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5EB1DB1211E7CA70A3E4BCE9E70BEED /* Build configuration list for PBXNativeTarget "ClingConstraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027E1B10B16B88770F46CEC5045C7B7F /* Debug */,
+				01F0E5AF942F3BD67BD3B52A810A4EA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

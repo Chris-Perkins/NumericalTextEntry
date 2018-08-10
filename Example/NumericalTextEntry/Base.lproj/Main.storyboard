@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,52 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="War-hb-D4Y" customClass="UINumberEntryField" customModule="NumericalTextEntry">
+                                <rect key="frame" x="26" y="33.5" width="323" height="200"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.47058823529999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="50" id="LD9-mE-llC"/>
+                                    <constraint firstAttribute="height" constant="200" id="whE-DV-JIl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoE-5l-65K" customClass="PrettyButton" customModule="PrettyButtons">
+                                <rect key="frame" x="127" y="253.5" width="120" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.53960589303287665" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="N3E-84-oQm"/>
+                                    <constraint firstAttribute="height" constant="30" id="dhb-8p-APq"/>
+                                </constraints>
+                                <state key="normal" title="Shrink">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="overlayColor">
+                                        <color key="value" red="1" green="0.6198517963881276" blue="0.18648631029136686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shrinkPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rha-gi-Ius"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.226419907" green="0.27255566910000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="War-hb-D4Y" secondAttribute="trailing" constant="10" id="B4c-wq-15I"/>
+                            <constraint firstItem="LoE-5l-65K" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="XKb-Zo-RWJ"/>
+                            <constraint firstItem="War-hb-D4Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="Yqk-wB-eCM"/>
+                            <constraint firstItem="War-hb-D4Y" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13.5" id="uOU-z8-2as"/>
+                            <constraint firstItem="LoE-5l-65K" firstAttribute="bottom" secondItem="War-hb-D4Y" secondAttribute="bottom" constant="50" id="zQo-9Z-Dgb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bigHeight" destination="whE-DV-JIl" id="mYA-uF-IoC"/>
+                        <outlet property="smallHeight" destination="LD9-mE-llC" id="c5x-rY-Ljl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="80.50974512743629"/>
         </scene>
     </scenes>
 </document>

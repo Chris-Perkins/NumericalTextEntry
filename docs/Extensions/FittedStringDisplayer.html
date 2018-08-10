@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FittedStringDisplayer Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/FittedStringDisplayer" class="dashAnchor"></a>
+    <a title="FittedStringDisplayer Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NumericalTextEntry Docs</a> (88% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NumericalTextEntry Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FittedStringDisplayer Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/UIFittedFlatNumberDisplayer.html">UIFittedFlatNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIFlatNumberDisplayer.html">UIFlatNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIFloatingDecimalNumberDisplayer.html">UIFloatingDecimalNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UINumberEntryField.html">UINumberEntryField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UINumericalKeyboardView.html">UINumericalKeyboardView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/FittedStringDisplayer.html">FittedStringDisplayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/UINumberDisplayer.html">UINumberDisplayer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FittedStringDisplayer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FittedStringDisplayer</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NumericalTextEntry21FittedStringDisplayerPAAE12getSizeToFit12CoreGraphics7CGFloatVSaySS_AGtG18stringsWithWeights_So6UIFontC4fontAG07minFontH0AG03maxtH0SC6CGSizeV0uH0tF"></a>
+                    <a name="//apple_ref/swift/Method/getSizeToFit(stringsWithWeights:font:minFontSize:maxFontSize:maxSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NumericalTextEntry21FittedStringDisplayerPAAE12getSizeToFit12CoreGraphics7CGFloatVSaySS_AGtG18stringsWithWeights_So6UIFontC4fontAG07minFontH0AG03maxtH0SC6CGSizeV0uH0tF">getSizeToFit(stringsWithWeights:font:minFontSize:maxFontSize:maxSize:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a font size that fits in the provided maxSize. Uses binary search to find the
+correct font size with a maximum size error of 0.1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSizeToFit</span><span class="p">(</span><span class="nv">stringsWithWeights</span><span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)],</span> <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">,</span>
+                         <span class="nv">minFontSize</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="nv">maxFontSize</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="p">,</span>
+                         <span class="nv">maxSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string to find the maximum font size for</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The font to find to find the maximum size for</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minFontSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The minimum font size to retrieve</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxFontSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum font size to retrieve</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum size of the rectangle to fill</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The font size that fits in the provided rectangle</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextField" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

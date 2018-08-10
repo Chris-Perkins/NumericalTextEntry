@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UINumberDisplayer Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/UINumberDisplayer" class="dashAnchor"></a>
+    <a title="UINumberDisplayer Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NumericalTextEntry Docs</a> (88% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NumericalTextEntry Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UINumberDisplayer Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/UIFittedFlatNumberDisplayer.html">UIFittedFlatNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIFlatNumberDisplayer.html">UIFlatNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIFloatingDecimalNumberDisplayer.html">UIFloatingDecimalNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UINumberEntryField.html">UINumberEntryField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UINumericalKeyboardView.html">UINumericalKeyboardView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/FittedStringDisplayer.html">FittedStringDisplayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/UINumberDisplayer.html">UINumberDisplayer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UINumberDisplayer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UINumberDisplayer</span></code></pre>
+
+                </div>
+              </div>
+            <p>A protocol used to display numbers</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NumericalTextEntry17UINumberDisplayerP12displayValueSaySo6UIViewCGSS_SS13withRawStringSo15NumberFormatterC06numberM0AF6inViewtF"></a>
+                    <a name="//apple_ref/swift/Method/displayValue(_:withRawString:numberFormatter:inView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NumericalTextEntry17UINumberDisplayerP12displayValueSaySo6UIViewCGSS_SS13withRawStringSo15NumberFormatterC06numberM0AF6inViewtF">displayValue(_:withRawString:numberFormatter:inView:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays the provided value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">displayValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">stringToDisplay</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withRawString</span> <span class="nv">rawString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">numberFormatter</span><span class="p">:</span> <span class="kt">NumberFormatter</span><span class="p">,</span> <span class="n">inView</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stringToDisplay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The complete string to display.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rawValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The raw value of the string to display (not formatted)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberFormatter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The formatter used to generate the stringToDisplay</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>view</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view where the value should be displayed in</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The views that were created to hold the displayed value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextField" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

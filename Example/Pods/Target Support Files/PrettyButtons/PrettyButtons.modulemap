@@ -1,0 +1,6 @@
+framework module PrettyButtons {
+  umbrella header "PrettyButtons-umbrella.h"
+
+  export *
+  module * { export * }
+}

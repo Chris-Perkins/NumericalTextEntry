@@ -1,0 +1,6 @@
+framework module NumericalTextEntry {
+  umbrella header "NumericalTextEntry-umbrella.h"
+
+  export *
+  module * { export * }
+}

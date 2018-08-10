@@ -1,0 +1,6 @@
+framework module ClingConstraints {
+  umbrella header "ClingConstraints-umbrella.h"
+
+  export *
+  module * { export * }
+}

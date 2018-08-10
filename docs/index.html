@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NumericalTextEntry  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="NumericalTextEntry  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NumericalTextEntry Docs</a> (88% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NumericalTextEntry Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NumericalTextEntry  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/UIFittedFlatNumberDisplayer.html">UIFittedFlatNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UIFlatNumberDisplayer.html">UIFlatNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UIFloatingDecimalNumberDisplayer.html">UIFloatingDecimalNumberDisplayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UINumberEntryField.html">UINumberEntryField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UINumericalKeyboardView.html">UINumericalKeyboardView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/FittedStringDisplayer.html">FittedStringDisplayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/UINumberDisplayer.html">UINumberDisplayer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='numericaltextentry' class='heading'>NumericalTextEntry</h1>
+
+<p>NumericTextEntry is a powerful, extensible library intended for your numeric text entry needs.</p>
+
+<p>Available NumberDisplayer components: </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">&nbsp;&nbsp;UIFittedFlatNumberDisplayer &nbsp;&nbsp;&nbsp;</th>
+<th style="text-align: center">UIFloatingDecimalNumberDisplayer</th>
+<th style="text-align: center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UIFlatNumberDisplayer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../Readme_Imgs/UIFittedFlatNumberDisplayer.gif" /></td>
+<td style="text-align: center"><img src="../Readme_Imgs/UIFloatingDecimalNumberDisplayer.gif" /></td>
+<td style="text-align: center"><img src="../Readme_Imgs/UIFlatNumberDisplayer.gif" /></td>
+</tr>
+</tbody></table>
+
+<p align="center">
+<img src="../Readme_Imgs/CustomKeyboard.gif" />
+<img src="../Readme_Imgs/DisableFloatEntry.gif" />
+</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<p>✅ Highly extensible<br>
+✅ Locale-safe; don&rsquo;t worry about different localization issues<br>
+✅ Display Numbers using 3 built-in NumberDisplayers (or your own!)<br>
+✅ Displayers with dynamic-sizing text to always fit your view<br>
+✅ Injectable NumberFormatter for custom number formatting<br>
+✅ Set a maximum value for numeric text<br>
+✅ Ability to hide decimals for text that can be represented by an Int<br>
+✅ Built-in beautiful, custom keyboard<br>
+✅ Define whether float values are allowed  </p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<ol>
+<li>Install <a href="https://cocoapods.org">CocoaPods</a></li>
+<li><p>Add this repo to your <code>Podfile</code></p>
+<pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'Example'</span> <span class="k">do</span>
+    <span class="c1"># IMPORTANT: Make sure use_frameworks! is included at the top of the file</span>
+    <span class="n">use_frameworks!</span>
+
+    <span class="n">pod</span> <span class="s1">'NumericalTextEntry'</span>
+<span class="k">end</span>
+</code></pre></li>
+<li><p>Run <code>pod install</code> in the podfile directory from your terminal</p></li>
+<li><p>Open up the <code>.xcworkspace</code> that CocoaPods created</p></li>
+<li><p>Done!</p></li>
+</ol>
+<h2 id='how-do-i-work-with-it' class='heading'>How Do I Work With It?</h2>
+
+<p>NumericalTextEntry is intended to be very extensible. Despite its extensibility, NumericalTextEntry is very easy to work with.</p>
+<h3 id='basics' class='heading'>Basics</h3>
+
+<p>To create a numeric text entry field: <code>let numberField = UINumberEntryField()</code></p>
+
+<p>To get the different values in the number field:  </p>
+<pre class="highlight plaintext"><code>let userInputValue = numberField.rawValue
+let numericValue = numberField.doubleValue
+let displayedValue = numberField.displayedStringValue
+</code></pre>
+<h3 id='customization' class='heading'>Customization</h3>
+
+<p>The following values are customizable for <code>UINumberEntryFields</code>:  </p>
+<pre class="highlight plaintext"><code>// Cap the maximum value for entry to 987.2 (default  9_999_999_999_999.99; exceeding the default value may cause formatting errors due to double-precision.)
+numberField.maximumValue = 987.2
+
+// Determines if decimals should not be in the displayedString if the number can be represented by an integer 
+// e.g.: rawValue: "23" - formattedNumber: "23.00" - displayedNumber: "23")
+// e.g. 2: rawValue: "23.0" - formattedNumber: "23.00" - displayedNumber: "23.00"
+numberField.hideDecimalsIfIntegerValue = false
+
+// Change the number formatter for the view
+numberField.numberFormatter = userDefinedNumberFormatter
+
+// Change the number displayer.
+numberField.numberDisplayer = UIFloatingDecimalNumberDisplayer()
+numberField.numberDisplayer = UIFlatNumberDisplayer()
+numberField.numberDisplayer = UIFittedFlatNumberDisplayer()
+
+// NumberDisplayer customization: both the UIFloatingDecimalNumberDisplayer and UIFittedFlatNumberDisplayer have toggleable animations.
+let numberDisplayer = UIFittedFlatNumberDisplayer()
+numberDisplayer.animated = false
+
+</code></pre>
+
+<p>Want to disallow float values? Simply inject a NumberFormatter that doesn&rsquo;t allow floats!  </p>
+<pre class="highlight plaintext"><code>let numberFormatter = NumberFormatter()
+numberFormatter.allowsFloats = false
+numberField.numberFormatter = numberFormatter
+</code></pre>
+<h3 id='custom-numberdisplayers' class='heading'>Custom NumberDisplayers</h3>
+
+<p>Want to create your own NumberDisplayer? Follow this simple protocol!</p>
+<pre class="highlight plaintext"><code>/// A protocol used to display numbers
+public protocol UINumberDisplayer {
+    /// Displays the provided value.
+    ///
+    /// - Parameters:
+    ///   - stringToDisplay: The complete string to display.
+    ///   - rawValue: The raw value of the string to display (not formatted)
+    ///   - numberFormatter: The formatter used to generate the stringToDisplay
+    ///   - view: The view where the value should be displayed in
+    /// - Returns: The views that were created to hold the displayed value.
+    func displayValue(_ stringToDisplay: String, withRawString rawString: String,
+                      numberFormatter: NumberFormatter, inView view: UIView) -&gt; [UIView]
+}
+</code></pre>
+<h3 id='component-diagram' class='heading'>Component Diagram</h3>
+
+<p><img src="../Readme_Imgs/UINumberEntryFieldComponentDiagram.png" alt=""></p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<p>iOS 10.0 is required.</p>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Read the <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Chris-Perkins/NumericalTextEntry/master/docs/index.html">docs</a></p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Ya Boi</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>NumericalTextEntry is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextField" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
