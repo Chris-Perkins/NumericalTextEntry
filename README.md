@@ -80,6 +80,8 @@ numberField.numberDisplayer = UIFittedFlatNumberDisplayer()
 let numberDisplayer = UIFittedFlatNumberDisplayer()
 numberDisplayer.animated = false
 
+// Custom fonts and text colors are available for every text displayer as well!
+let numberDisplayer = UIFittedFlatNumberDisplay(withFont: customFont, withTextColor: UIColor.red)
 ```
 
 Want to disallow float values? Simply inject a NumberFormatter that doesn't allow floats!  
