@@ -1,4 +1,6 @@
-# NumericalTextEntry
+<p align="center">
+<img src="Readme_Imgs/NumericalTextEntryHeader.png" />
+</p>
 
 NumericTextEntry is a powerful, extensible library intended for your numeric text entry needs.
 
@@ -15,6 +17,7 @@ Available NumberDisplayer components:
 ## Features
 
 ✅ Highly extensible  
+✅ iPad friendly--uses a numeric keyboard  
 ✅ Locale-safe; don't worry about different localization issues  
 ✅ Display Numbers using 3 built-in NumberDisplayers (or your own!)  
 ✅ Displayers with dynamic-sizing text to always fit your view  
@@ -62,6 +65,9 @@ The following values are customizable for `UINumberEntryFields`:
 ```Swift
 // Cap the maximum value for entry to 987.2 (default  9_999_999_999_999.99; exceeding the default value may cause formatting errors due to double-precision.)
 numberField.maximumValue = 987.2
+
+// Set the starting value for the text entry field.
+numberField.startingValue = 37.2
 
 // Determines if decimals should not be in the displayedString if the number can be represented by an integer 
 // e.g.: rawValue: "23" - formattedNumber: "23.00" - displayedNumber: "23")

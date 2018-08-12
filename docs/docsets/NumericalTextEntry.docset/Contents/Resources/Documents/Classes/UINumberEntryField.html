@@ -71,7 +71,8 @@
             <h1>UINumberEntryField</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">UINumberEntryField</span> <span class="p">:</span> <span class="kt">UIControl</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@IBDesignable</span>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">UINumberEntryField</span> <span class="p">:</span> <span class="kt">UIControl</span></code></pre>
 
                 </div>
               </div>
@@ -191,8 +192,24 @@ within bounds.</p>
                         <p>The number formatter for this text entry.</p>
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    The grouping separator must also not consist of the decimal separator&rsquo;s character
-This also assumes the number formatter will NOT be changed after injection.
+    The grouping separator must also not consist of the decimal separator&rsquo;s
+character or vice-versa.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The decimal separator must not be an empty string.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This assumes the number formatter will NOT be changed after injection.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    You may experience weird behavior if your decimal or grouping separator
+is a number itself; this is not checked and does not throw.
 
 </div>
 
@@ -295,9 +312,38 @@ Re-formats the previously created display views upon change.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@NumericalTextEntry@objc(cs)UINumberEntryField(py)rawValue"></a>
+                    <a name="/c:@M@NumericalTextEntry@objc(cs)UINumberEntryField(py)startingValue"></a>
+                    <a name="//apple_ref/swift/Property/startingValue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NumericalTextEntry@objc(cs)UINumberEntryField(py)startingValue">startingValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The starting value for the field. Will replace the current value for rawValue with the
+corresponding rawValue String if the rawValue is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">startingValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NumericalTextEntry08UINumberC5FieldC8rawValueSSvp"></a>
                     <a name="//apple_ref/swift/Property/rawValue" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@NumericalTextEntry@objc(cs)UINumberEntryField(py)rawValue">rawValue</a>
+                    <a class="token" href="#/s:18NumericalTextEntry08UINumberC5FieldC8rawValueSSvp">rawValue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -319,8 +365,7 @@ Think of the nightmare of trying to remove the correct decimal in a double of 0.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">rawValue</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rawValue</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -340,7 +385,7 @@ Think of the nightmare of trying to remove the correct decimal in a double of 0.
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Double representing <code><a href="../Classes/UINumberEntryField.html#/c:@M@NumericalTextEntry@objc(cs)UINumberEntryField(py)rawValue">rawValue</a></code>; computed by computing the double value of <code><a href="../Classes/UINumberEntryField.html#/c:@M@NumericalTextEntry@objc(cs)UINumberEntryField(py)rawValue">rawValue</a></code>.</p>
+                        <p>The Double representing <code><a href="../Classes/UINumberEntryField.html#/s:18NumericalTextEntry08UINumberC5FieldC8rawValueSSvp">rawValue</a></code>; computed by computing the double value of <code><a href="../Classes/UINumberEntryField.html#/s:18NumericalTextEntry08UINumberC5FieldC8rawValueSSvp">rawValue</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -788,9 +833,7 @@ Incorrect behavior if this is not the case!</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes the last character being displayed in the character text box.</p>
-
-<p>Unsets the currentDecimalEditingPosition if it&rsquo;s not filled in.</p>
+                        <p>Deletes the last character being displayed in the character text box (if it exists).</p>
 
                       </div>
                       <div class="declaration">
@@ -809,7 +852,7 @@ Incorrect behavior if this is not the case!</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextField" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-10)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextEntry" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
