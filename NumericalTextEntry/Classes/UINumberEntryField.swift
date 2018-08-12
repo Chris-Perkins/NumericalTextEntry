@@ -12,6 +12,7 @@ import ClingConstraints
 
 /// A view that takes in numerical data and displays it. A custom keyboard is used for numerical
 /// input.
+@IBDesignable
 open class UINumberEntryField: UIControl {
     /// The default number formatter for this NumericalTextEntry
     private static var defaultNumberFormatter: NumberFormatter {
@@ -33,7 +34,9 @@ open class UINumberEntryField: UIControl {
     private static let defaultNumberDisplayer: UINumberDisplayer = UIFittedFlatNumberDisplayer()
     
     /// The default string to show when there are no characters in the field yet.
-    private static var defaultText = "0"
+    private static let defaultText = "0"
+    
+    private static let maximumDecimalComponents = 2
     
     /// The numerical keyboard created when the view becomes the first responder.
     lazy private var numericalKeyboard: UINumericalKeyboardView = {
@@ -66,13 +69,22 @@ open class UINumberEntryField: UIControl {
     
     /// The number formatter for this text entry.
     ///
-    /// - Warning: The grouping separator must also not consist of the decimal separator's character
-    /// This also assumes the number formatter will NOT be changed after injection.
+    /// - Warning: The grouping separator must also not consist of the decimal separator's
+    /// character or vice-versa.
+    /// - Warning: The decimal separator must not be an empty string.
+    /// - Warning: This assumes the number formatter will NOT be changed after injection.
+    /// - Warning: You may experience weird behavior if your decimal or grouping separator
+    /// is a number itself; this is not checked and does not throw.
     public var numberFormatter: NumberFormatter! = UINumberEntryField.defaultNumberFormatter {
         didSet {
-            if numberFormatter.groupingSeparator.contains(numberFormatter.decimalSeparator.first!) {
+            if numberFormatter.groupingSeparator.contains(numberFormatter.decimalSeparator) {
                 fatalError("The number formatter's grouping separator must not consist of the "
                     + "decimal separator.")
+            } else if numberFormatter.decimalSeparator.contains(numberFormatter.groupingSeparator) {
+                fatalError("The number formatter's decimal separator must not consist of the "
+                    + "grouping separator.")
+            } else if numberFormatter.decimalSeparator.isEmpty {
+                fatalError("The decimal separator for the number formatter cannot be empty.")
             }
             
             if numberFormatter.allowsFloats == false {
@@ -103,7 +115,7 @@ open class UINumberEntryField: UIControl {
     }
     
     /// Determines if the number formatter should hide decimals if the number is an integer.
-    @IBInspectable public var hideDecimalsIfIntegerValue = true {
+    @IBInspectable public var hideDecimalsIfIntegerValue: Bool = true {
         didSet {
             triggerDisplayChange()
         }
@@ -119,12 +131,27 @@ open class UINumberEntryField: UIControl {
         }
     }
     
+    /// The starting value for the field. Will replace the current value for rawValue with the
+    /// corresponding rawValue String if the rawValue is empty.
+    @IBInspectable public var startingValue: Double = 0 {
+        didSet {
+            if rawValue.isEmpty && doubleValue <= maximumValue {
+                rawValue = String(describing: startingValue).replacingOccurrences(
+                        of: Locale(identifier: UINumberEntryField
+                            .localeIdentifierForDefaultDecimalSeparator).decimalSeparator!,
+                        with: numberFormatter.decimalSeparator)
+            } else if doubleValue > maximumValue {
+                print("Attempted to assign a value greater than the maximum value assigned.")
+            }
+        }
+    }
+    
     /// The raw value of the number being displayed.
     ///
     /// - Note: If you're a developer asking why the value is stored as a String.. Hi!
     /// A string was chosen since doubles often lose true precision.
     /// Think of the nightmare of trying to remove the correct decimal in a double of 0.49999999...
-    @IBInspectable public var rawValue: String = "" {
+    public private(set) var rawValue: String = "" {
         didSet {
             lastCreatedNumberDisplayerViews = numberDisplayer.displayValue(
                 displayedStringValue, withRawString: rawValue, numberFormatter: numberFormatter,
@@ -159,7 +186,16 @@ open class UINumberEntryField: UIControl {
     
     /// The current decimal position being edited in the view; 0-indexed.
     /// `nil` if a decimal is not being edited.
-    private var currentDecimalEditingPosition: Int? = nil
+    private var currentDecimalEditingPosition: Int? {
+        let decimalComponents = rawValue.components(separatedBy: numberFormatter.decimalSeparator)
+        
+        // If we're editing the decimal field, then the current decimal being edited is the last one.
+        if decimalComponents.count == UINumberEntryField.maximumDecimalComponents {
+            return decimalComponents.last!.count
+        } else {
+            return nil
+        }
+    }
     
     /// Whether or not we're updating from the interface builder (IB).
     private var isUpdatingFromIB = false
@@ -296,7 +332,7 @@ extension UINumberEntryField: UIKeyInput {
             // NOTE: it's safe to cast here since decimals don't cause floats to go out of bounds :)
             if text == numberFormatter.decimalSeparator
                 || decimalEditPosition >= numberFormatter.maximumFractionDigits {
-                // Some error here
+                print("User attempted to enter a decimal separator, but one already exists.")
             } else {
                 /* Checks to see if we exceeded bounds; done this way to prevent overflow :)
                     Simple algebra:
@@ -308,22 +344,19 @@ extension UINumberEntryField: UIKeyInput {
                     print("NumericalTextEntry WARNING: user attempted to exceed maximum value!")
                 } else {
                     rawValue.append(text)
-                    
-                    currentDecimalEditingPosition = decimalEditPosition + 1
                 }
             }
         } else {
             if text == numberFormatter.decimalSeparator {
                 // If the number formatter doesn't allow floats in any way, we shouldn't either
                 if !numberFormatter.allowsFloats || numberFormatter.maximumFractionDigits == 0 {
-                    // Some error here
+                    print("User attempted to insert a decimal separator, but floats aren't allowed.")
                 } else {
                     if rawValue.isEmpty {
                         // Insert the default 0 value first
                         insertText(UINumberEntryField.defaultText)
                     }
                     // Start editing the decimal field
-                    currentDecimalEditingPosition = 0
                     rawValue.append(text)
                 }
             } else {
@@ -348,25 +381,10 @@ extension UINumberEntryField: UIKeyInput {
         }
     }
     
-    /// Deletes the last character being displayed in the character text box.
-    ///
-    /// Unsets the currentDecimalEditingPosition if it's not filled in.
+    /// Deletes the last character being displayed in the character text box (if it exists).
     public func deleteBackward() {
         if hasText {
-            // Different behaviors for the different states of editing.
-            // If we're editing a decimal, we have some funky checks we have to do for deletion.
-            // If we're editing an integer, it's safe to just remove the last character.
-            if let currentDecimalPosition = currentDecimalEditingPosition {
-                // This shouldn't be less than 0... but just in case.
-                // By checking if we're at 0, we're essentially saying "do we have any decimal
-                // numbers?". If we're at 0, that means we're safe to go back into integer-land.
-                currentDecimalEditingPosition = currentDecimalPosition <= 0 ? nil
-                    : currentDecimalPosition - 1
-            }
-            
             rawValue.removeLast()
-        } else {
-            // Some error here
         }
     }
 }

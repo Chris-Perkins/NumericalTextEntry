@@ -29,6 +29,15 @@
                                     <constraint firstAttribute="height" priority="999" constant="50" id="LD9-mE-llC"/>
                                     <constraint firstAttribute="height" constant="200" id="whE-DV-JIl"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startingValue">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideDecimalsIfIntegerValue" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="31"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoE-5l-65K" customClass="PrettyButton" customModule="PrettyButtons">
                                 <rect key="frame" x="127" y="253.5" width="120" height="30"/>
