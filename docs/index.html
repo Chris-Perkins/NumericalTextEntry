@@ -68,9 +68,9 @@
         <section>
           <section class="section">
             
-            <h1 id='numericaltextentry' class='heading'>NumericalTextEntry</h1>
+            <p><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/NumericalTextEntryHeader.png" alt=""></p>
 
-<p>NumericTextEntry is a powerful, extensible library intended for your numeric text entry needs.</p>
+<p>NumericTextEntry is a powerful, extensible library made for your application&rsquo;s numeric entry needs.</p>
 
 <p>Available NumberDisplayer components: </p>
 
@@ -82,19 +82,27 @@
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: center"><img src="../Readme_Imgs/UIFittedFlatNumberDisplayer.gif" /></td>
-<td style="text-align: center"><img src="../Readme_Imgs/UIFloatingDecimalNumberDisplayer.gif" /></td>
-<td style="text-align: center"><img src="../Readme_Imgs/UIFlatNumberDisplayer.gif" /></td>
+<td style="text-align: center"><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UIFittedFlatNumberDisplayer.gif" alt=""></td>
+<td style="text-align: center"><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UIFloatingDecimalNumberDisplayer.gif" alt=""></td>
+<td style="text-align: center"><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UIFlatNumberDisplayer.gif" alt=""></td>
 </tr>
 </tbody></table>
 
-<p align="center">
-<img src="../Readme_Imgs/CustomKeyboard.gif" />
-<img src="../Readme_Imgs/DisableFloatEntry.gif" />
-</p>
+<table><thead>
+<tr>
+<th style="text-align: center">Custom Keyboard</th>
+<th style="text-align: center">Disable Floats&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/CustomKeyboard.gif" alt=""></td>
+<td style="text-align: center"><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/DisableFloatEntry.gif" alt=""></td>
+</tr>
+</tbody></table>
 <h2 id='features' class='heading'>Features</h2>
 
 <p>✅ Highly extensible<br>
+✅ iPad friendly&ndash;uses a purely numeric keyboard<br>
 ✅ Locale-safe; don&rsquo;t worry about different localization issues<br>
 ✅ Display Numbers using 3 built-in NumberDisplayers (or your own!)<br>
 ✅ Displayers with dynamic-sizing text to always fit your view<br>
@@ -137,6 +145,9 @@ let displayedValue = numberField.displayedStringValue
 <pre class="highlight plaintext"><code>// Cap the maximum value for entry to 987.2 (default  9_999_999_999_999.99; exceeding the default value may cause formatting errors due to double-precision.)
 numberField.maximumValue = 987.2
 
+// Set the starting value for the number field
+numberField.startingValue = 37.2
+
 // Determines if decimals should not be in the displayedString if the number can be represented by an integer 
 // e.g.: rawValue: "23" - formattedNumber: "23.00" - displayedNumber: "23")
 // e.g. 2: rawValue: "23.0" - formattedNumber: "23.00" - displayedNumber: "23.00"
@@ -154,6 +165,8 @@ numberField.numberDisplayer = UIFittedFlatNumberDisplayer()
 let numberDisplayer = UIFittedFlatNumberDisplayer()
 numberDisplayer.animated = false
 
+// Custom fonts and text colors are available for every number displayer as well!
+let numberDisplayer = UIFittedFlatNumberDisplay(withFont: customFont, withTextColor: UIColor.red)
 </code></pre>
 
 <p>Want to disallow float values? Simply inject a NumberFormatter that doesn&rsquo;t allow floats!  </p>
@@ -180,7 +193,7 @@ public protocol UINumberDisplayer {
 </code></pre>
 <h3 id='component-diagram' class='heading'>Component Diagram</h3>
 
-<p><img src="../Readme_Imgs/UINumberEntryFieldComponentDiagram.png" alt=""></p>
+<p><img src="https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UINumberEntryFieldComponentDiagram.png" alt=""></p>
 <h2 id='example' class='heading'>Example</h2>
 
 <p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
@@ -189,7 +202,7 @@ public protocol UINumberDisplayer {
 <p>iOS 10.0 is required.</p>
 <h2 id='documentation' class='heading'>Documentation</h2>
 
-<p>Read the <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Chris-Perkins/NumericalTextEntry/master/docs/index.html">docs</a></p>
+<p>Read the <a href="https://htmlpreview.github.io/?https://github.com/Chris-Perkins/NumericalTextEntry/blob/master/docs/index.html">docs</a></p>
 <h2 id='author' class='heading'>Author</h2>
 
 <p>Ya Boi</p>
@@ -200,7 +213,7 @@ public protocol UINumberDisplayer {
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextField" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-10)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Chris-Perkins/NumericalTextEntry" target="_blank" rel="external">chrisfromtemporaryid@gmail.com</a>. All rights reserved. (Last updated: 2018-08-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

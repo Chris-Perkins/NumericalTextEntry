@@ -16,21 +16,21 @@
     },
     {
       "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/UINumberEntryField.swift",
-      "line": 200,
+      "line": 237,
       "symbol": "UINumberEntryField.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/UINumberEntryField.swift",
-      "line": 205,
+      "line": 242,
       "symbol": "UINumberEntryField.awakeFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/chrisperkins/Desktop/NumericalTextEntry/NumericalTextEntry/Classes/UINumberEntryField.swift",
-      "line": 210,
+      "line": 247,
       "symbol": "UINumberEntryField.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

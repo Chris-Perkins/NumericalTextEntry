@@ -1,23 +1,21 @@
-<p align="center">
-<img src="Readme_Imgs/NumericalTextEntryHeader.png" />
-</p>
+![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/NumericalTextEntryHeader.png)
 
-NumericTextEntry is a powerful, extensible library intended for your numeric text entry needs.
+NumericTextEntry is a powerful, extensible library made for your application's numeric entry needs.
 
 Available NumberDisplayer components: 
 
 | &nbsp;&nbsp;UIFittedFlatNumberDisplayer &nbsp;&nbsp;&nbsp; | UIFloatingDecimalNumberDisplayer | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UIFlatNumberDisplayer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |:---------------------------:|:--------------------------------:|:---------------------:|
-<img src="Readme_Imgs/UIFittedFlatNumberDisplayer.gif" /> | <img src="Readme_Imgs/UIFloatingDecimalNumberDisplayer.gif" /> | <img src="Readme_Imgs/UIFlatNumberDisplayer.gif" />
-<p align="center">
-<img src="Readme_Imgs/CustomKeyboard.gif" />
-<img src="Readme_Imgs/DisableFloatEntry.gif" />
-</p>
+![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UIFittedFlatNumberDisplayer.gif) | ![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UIFloatingDecimalNumberDisplayer.gif) | ![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UIFlatNumberDisplayer.gif)
+
+| Custom Keyboard | Disable Floats&nbsp; |
+|:---------------:|:--------------:|
+![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/CustomKeyboard.gif) | ![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/DisableFloatEntry.gif)
 
 ## Features
 
 ✅ Highly extensible  
-✅ iPad friendly--uses a numeric keyboard  
+✅ iPad friendly--uses a purely numeric keyboard  
 ✅ Locale-safe; don't worry about different localization issues  
 ✅ Display Numbers using 3 built-in NumberDisplayers (or your own!)  
 ✅ Displayers with dynamic-sizing text to always fit your view  
@@ -66,7 +64,7 @@ The following values are customizable for `UINumberEntryFields`:
 // Cap the maximum value for entry to 987.2 (default  9_999_999_999_999.99; exceeding the default value may cause formatting errors due to double-precision.)
 numberField.maximumValue = 987.2
 
-// Set the starting value for the text entry field.
+// Set the starting value for the number field
 numberField.startingValue = 37.2
 
 // Determines if decimals should not be in the displayedString if the number can be represented by an integer 
@@ -86,7 +84,7 @@ numberField.numberDisplayer = UIFittedFlatNumberDisplayer()
 let numberDisplayer = UIFittedFlatNumberDisplayer()
 numberDisplayer.animated = false
 
-// Custom fonts and text colors are available for every text displayer as well!
+// Custom fonts and text colors are available for every number displayer as well!
 let numberDisplayer = UIFittedFlatNumberDisplay(withFont: customFont, withTextColor: UIColor.red)
 ```
 
@@ -119,7 +117,7 @@ public protocol UINumberDisplayer {
 
 ### Component Diagram
 
-![](Readme_Imgs/UINumberEntryFieldComponentDiagram.png)
+![](https://github.com/Chris-Perkins/NumericalTextEntry/raw/master/Readme_Imgs/UINumberEntryFieldComponentDiagram.png)
 
 
 ## Example
