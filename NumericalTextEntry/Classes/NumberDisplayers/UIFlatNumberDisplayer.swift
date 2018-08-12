@@ -54,11 +54,10 @@ open class UIFlatNumberDisplayer: UINumberDisplayer {
         
         displayedLabel?.attributedText = NumberDisplayerUtils
             .getAttributedStringForStrings(displayedString: stringToDisplay, rawString: rawString,
-                                           groupingSeparator:numberFormatter.groupingSeparator,
+                                           numberFormatter: numberFormatter,
                                            matchingTextColor: textColor,
                                            missingTextColor: textColor.withAlphaComponent(
-                                            UIFlatNumberDisplayer.fadedColorAlpha),
-                                           font: font)
+                                            UIFlatNumberDisplayer.fadedColorAlpha), font: font)
         
         return [displayedLabel!]
     }

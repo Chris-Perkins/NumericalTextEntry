@@ -108,7 +108,8 @@ open class UIFloatingDecimalNumberDisplayer: UINumberDisplayer {
                 of: numberFormatter.decimalSeparator, with: ""),
             rawValue: rawString.replacingOccurrences(
                 of: numberFormatter.decimalSeparator, with: ""),
-            ignoredStrings: [numberFormatter.groupingSeparator]) ?? stringToDisplay.count
+            ignoredStrings: [numberFormatter.groupingSeparator, numberFormatter.currencySymbol])
+            ?? stringToDisplay.count
         
         let decimalComponents =
             stringToDisplay.components(separatedBy: numberFormatter.decimalSeparator)

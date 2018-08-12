@@ -92,7 +92,8 @@ open class UIFittedFlatNumberDisplayer: UINumberDisplayer {
         // Gets the first index where the two strings differ; string length if no difference.
         let indexOfDiffering = NumberDisplayerUtils.getFirstIndexWhereStringsDoNotMatch(
             displayedString: stringToDisplay, rawValue: rawString,
-            ignoredStrings: [numberFormatter.groupingSeparator]) ?? stringToDisplay.count
+            ignoredStrings: [numberFormatter.groupingSeparator, numberFormatter.currencySymbol])
+            ?? stringToDisplay.count
         
         // Set up the fonts for when they're needed in the below for loops.
         let fontSize = getFontSizeForString(stringToDisplay, inView: view)

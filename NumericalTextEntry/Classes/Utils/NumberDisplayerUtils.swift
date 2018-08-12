@@ -5,16 +5,26 @@
 //  Created by Christopher Perkins on 8/4/18.
 //
 
-/// A Utils Class that holds methods used by the Number Displayers
+/// A Utils Class that holds methods used by the Number Displayers.
 internal class NumberDisplayerUtils {
-    /// Gets the attributed string.
+    /// Gets an attributed string where text that starts with the same strings receives one color,
+    /// and that does not start the same in both receives a different color. Ignores the
+    /// `numberFormatter`'s grouping separator and currency symbol when figuring out where the
+    /// strings differ.
     ///
     /// - Parameters:
-    ///   - displayedString: The displayed string
+    ///   - displayedString: The string being displayed
     ///   - rawString: The raw string
-    /// - Returns: The attributed string generated
+    ///   - numberFormatter: The numberFormatter that will be used to retrieve grouping separator
+    /// and currencySymbols from
+    ///   - matchingTextColor: The color to assign for text that starts the same
+    ///   - missingTextColor: The color to assign when text starts to differ
+    ///   - font: The font to use for the attributed string
+    /// - Returns: An attributed string where text that starts the same in the two input strings
+    /// has the input `font` and `matchingTextColor` and text that differs receives the same
+    /// input `font` and `missingTextColor`.
     internal static func getAttributedStringForStrings(displayedString: String, rawString: String?,
-                                                       groupingSeparator: String,
+                                                       numberFormatter: NumberFormatter,
                                                        matchingTextColor: UIColor,
                                                        missingTextColor: UIColor,
                                                        font: UIFont) -> NSAttributedString {
@@ -22,8 +32,8 @@ internal class NumberDisplayerUtils {
         
         if let rawString = rawString,
             let differLocation = getFirstIndexWhereStringsDoNotMatch(
-                displayedString: displayedString, rawValue: rawString,
-                ignoredStrings: [groupingSeparator]),
+                displayedString: displayedString, rawValue: rawString, ignoredStrings:
+                [numberFormatter.groupingSeparator, numberFormatter.currencySymbol]),
             differLocation < displayedString.count {
             
             let realStringDifferIndex = displayedString.index(displayedString.startIndex,
@@ -54,11 +64,11 @@ internal class NumberDisplayerUtils {
     /// - Parameters:
     ///   - displayedString: input; ignore ignoredCharacters
     ///   - otherString: input
-    ///   - ignoredCharacters: Characters that should be ignored in the displayedString
+    ///   - ignoredCharacters: Strings that should be ignored in the displayedString
     /// - Returns: The first index where the strings differed
     internal static func getFirstIndexWhereStringsDoNotMatch(displayedString: String,
                                                              rawValue: String,
-                                                             ignoredStrings: [String]) -> Int? {
+                                                             ignoredStrings: [String?]) -> Int? {
         var currentRawValueIndex = 0
         var currentDisplayedIndex = 0
         
@@ -70,7 +80,8 @@ internal class NumberDisplayerUtils {
             let displayedStringSuffixAfterIndex =
                 displayedString[currentDisplayedStringIndex..<displayedString.endIndex]
             for ignoredString in ignoredStrings {
-                if displayedStringSuffixAfterIndex.hasPrefix(ignoredString) {
+                if let ignoredString = ignoredString, !ignoredString.isEmpty
+                    &&  displayedStringSuffixAfterIndex.hasPrefix(ignoredString) {
                     currentDisplayedIndex += ignoredString.count
                     continue
                 }
